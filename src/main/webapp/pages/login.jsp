@@ -11,6 +11,11 @@
     <title>Title</title>
 </head>
 <body>
-test
+    <h1>访问servlet api method 1</h1>
+    <form action="${contextPath}/servletApiM1.action" method="post">
+        name: <input type="text" name="name"><br/>
+        age: <input type="text" name="age"><br/>
+        <input type="submit" value="submit">
+    </form>
 </body>
 </html>
