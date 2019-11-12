@@ -17,10 +17,10 @@
         <action name="strutsDemo1" class="com.allan.struts2.StrutsDemo1">
             <result name="success" >/pages/login.jsp</result>
         </action>
+
+        <action name="servletApiM1" class="com.allan.struts2.ServletApiMethod">
+            <result name="success" >/pages/showParam.jsp</result>
+        </action>
     </package>
-
-    <!--<include file="example.xml"/>-->
-
-    <!-- Add packages here -->
 
 </struts>
