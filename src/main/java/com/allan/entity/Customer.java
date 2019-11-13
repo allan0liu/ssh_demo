@@ -1,11 +1,15 @@
 package com.allan.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Customer {
 
     private int id;
     private String name;
     private String address;
     private String sex;
+    private Set<Order> orders =  new HashSet<Order>();
 
     public int getId() {
         return id;
@@ -47,5 +51,13 @@ public class Customer {
                 ", address='" + address + '\'' +
                 ", sex='" + sex + '\'' +
                 '}';
+    }
+
+    public Set<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Set<Order> orders) {
+        this.orders = orders;
     }
 }
