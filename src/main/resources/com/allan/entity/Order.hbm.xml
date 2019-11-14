@@ -13,8 +13,7 @@
 		<property name="receiverInfo" column="receiver_info" length="50"/>
 		
 		<!-- 多对一 -->
-		<many-to-one fetch="join" lazy="false" name="c" class="com.allan.entity.Customer" column="c_customer_id"
-					 cascade="save-update">
+		<many-to-one  name="c" class="com.allan.entity.Customer" column="customer_id" cascade="save-update">
 		</many-to-one>
 		<!-- 
 			name属性它描述的是Order类中的一的一方的属性名称   Customer c;

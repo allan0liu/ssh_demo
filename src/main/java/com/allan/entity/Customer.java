@@ -9,7 +9,7 @@ public class Customer {
     private String name;
     private String address;
     private String sex;
-    private Set<Order> orders =  new HashSet<Order>();
+//    private Set<Order> orders =  new HashSet<Order>();
 
     public int getId() {
         return id;
@@ -53,11 +53,11 @@ public class Customer {
                 '}';
     }
 
-    public Set<Order> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(Set<Order> orders) {
-        this.orders = orders;
-    }
+//    public Set<Order> getOrders() {
+//        return orders;
+//    }
+//
+//    public void setOrders(Set<Order> orders) {
+//        this.orders = orders;
+//    }
 }

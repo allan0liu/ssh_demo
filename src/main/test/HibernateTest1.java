@@ -34,7 +34,7 @@ public class HibernateTest1 {
         // 开启事务
         Transaction transaction = session.beginTransaction();
         // 操作
-        session.save(c);
+        session.save(order);
 
         // 事务提交
         transaction.commit();
