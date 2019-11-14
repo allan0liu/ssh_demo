@@ -36,6 +36,7 @@
 
 		<!-- 配置hibernate的映射文件所在位置 -->
 		<mapping resource="com/allan/entity/Customer.hbm.xml" />
+		<mapping resource="com/allan/entity/Order.hbm.xml" />
 	</session-factory>
 
 </hibernate-configuration>	

@@ -9,5 +9,4 @@ CREATE TABLE t_order(
 `id` INT PRIMARY KEY AUTO_INCREMENT,
 `money` DOUBLE,
 `receiver_info` VARCHAR(50)
-
 )
