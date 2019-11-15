@@ -12,29 +12,38 @@ public class HibernateTest1 {
     // 保存一个Customer
     @Test
     public void saveCustomerTest() {
+                // 使用hibernate的api来完成将customer信息保存到mysql中操作
+        Configuration config = new Configuration().configure(); // 加载hibernate.cfg.xml
+        SessionFactory sessionFactory = config.buildSessionFactory();
+        Session session = sessionFactory.openSession(); // 相当于得到一个Connection。
+        // 开启事务
+        Transaction transaction = session.beginTransaction();
         // 创建一个Customer
         Customer c = new Customer();
         c.setName("张三");
         c.setAddress("北京");
         c.setSex("男");
+//        session.save(c);
         Order order = new Order();
-        order.setC(c);
+//        order.setC(c);
         order.setMoney(12.0);
         order.setReceiverInfo("aaaa");
         Order order2 = new Order();
-        order2.setC(c);
+//        order2.setC(c);
         order2.setMoney(22.0);
         order2.setReceiverInfo("bbbbb");
-        // 使用hibernate的api来完成将customer信息保存到mysql中操作
-        Configuration config = new Configuration().configure(); // 加载hibernate.cfg.xml
-
-        SessionFactory sessionFactory = config.buildSessionFactory();
-
-        Session session = sessionFactory.openSession(); // 相当于得到一个Connection。
-        // 开启事务
-        Transaction transaction = session.beginTransaction();
-        // 操作
         session.save(order);
+        session.save(order2);
+
+        c.getOrders().add(order);
+        c.getOrders().add(order2);
+//        session.persist(c);
+        session.save(c);
+//        order.setC(c);
+//        order2.setC(c);
+//        session.persist(order);
+//        session.persist(order2);
+        // 操作
 
         // 事务提交
         transaction.commit();
@@ -151,9 +160,7 @@ public class HibernateTest1 {
 
     @Test
     public void TestDouble(){
-        double v = Double.parseDouble("2");
-        System.out.println(v);
-        long v2 = (long)0.2*10;
-        System.out.println(v2);
+
+//        1 == null;
     }
 }

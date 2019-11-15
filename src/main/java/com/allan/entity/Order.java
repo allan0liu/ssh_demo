@@ -7,15 +7,15 @@ public class Order {
 	private Double money;
 	private String receiverInfo; // 收货地址
 	// 订单与客户关联
-	private Customer c; // 描述订单属于某一个客户
+//	private Customer c; // 描述订单属于某一个客户
 
-	public Customer getC() {
-		return c;
-	}
-
-	public void setC(Customer c) {
-		this.c = c;
-	}
+//	public Customer getC() {
+//		return c;
+//	}
+//
+//	public void setC(Customer c) {
+//		this.c = c;
+//	}
 
 	public Integer getId() {
 		return id;
