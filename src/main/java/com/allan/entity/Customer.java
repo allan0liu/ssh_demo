@@ -1,14 +1,21 @@
 package com.allan.entity;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
+@Table(name="t_customer")
 public class Customer {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
     private String name;
     private String address;
     private String sex;
+
+    @OneToMany(targetEntity=Order.class,mappedBy="c",orphanRemoval=true)
     private Set<Order> orders =  new HashSet<Order>();
 
     public int getId() {
